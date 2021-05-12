@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
-import { render } from 'react-dom';
-import { Card, CardImg, CardImgOverlay, CardText, CardBody,
+import { Card, CardImg, CardText, CardBody,
     CardTitle } from 'reactstrap';
 
 
@@ -53,10 +52,12 @@ import { Card, CardImg, CardImgOverlay, CardText, CardBody,
      render(){
          if(this.props.dish !=null)
             return(
-                <div className="row">
-                    {this.renderDish(this.props.dish)}
-                    {this.renderComments(this.props.dish.comments)}
-                </div>           
+                <div className="container">
+                    <div className="row">
+                        {this.renderDish(this.props.dish)}
+                        {this.renderComments(this.props.dish.comments)}
+                    </div> 
+                </div>          
             );
           else
                 return(
